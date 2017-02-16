@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">Dog Feeder</string>
+
+
+    <!-- A -->
+    <string name="auto_food">Auto Food</string>
+    <!-- B -->
+    <!-- C -->
+    <string name="capture">Capture</string>
+    <string name="cancel">Cancel</string>
+    <string name="change">Change</string>
+    <string name="choose">Choose</string>
+    <string name="connect">Connect</string>
+    <!-- D -->
+    <string name="dog_feeder">Dog Feeder</string>
+    <!-- E -->
+    <string name="eg_IP">e.g. 192.168.1.2</string>
+    <!-- F -->
+    <!-- G -->
+    <!-- H -->
+    <!-- I -->
+    <string name="ip_camera">IP Camera</string>
+    <string name="iP_control_food">IP Control Food</string>
+    <string name="inputIPCam">Please input your ip camera.</string>
+    <!-- J -->
+    <!-- K -->
+    <!-- L -->
+    <string name="loadIMSuccess">Load Image Success</string>
+    <!-- M -->
+    <!-- M -->
+    <!-- O -->
+    <string name="open">Open</string>
+    <!-- P -->
+    <!-- Q -->
+    <string name="quality">Quality</string>
+    <!-- R -->
+    <!-- S -->
+    <string name="set_ip_camera">Setting IP Camera</string>
+    <string name="set_ip">Setting IP</string>
+    <string name="set_quality_video">Setting Quality Video</string>
+    <string name="set_auto_food">Set auto Food</string>
+    <string name="setting">Setting</string>
+
+    <string name="set_food_auto">On set auto food</string>
+    <string name="set_give_food">On give food</string>
+    <string name="set_water">On water</string>
+    <!-- T -->
+    <!-- U -->
+    <!-- V -->
+    <string name="version">Version 1.1.0</string>
+    <!-- W -->
+    <string name="water">Water</string>
+    <!-- X -->
+    <!-- Y -->
+    <!-- Z -->
+
+    <!-- Error -->
+    <string name="err1">Please fill all IP Address</string>
+    <string name="err2">Please input true IP format of Camera</string>
+    <string name="err3">Please input true IP format of Control food</string>
+    <string name="err4">Please fill IP Address</string>
+    <string name="err5">Can not connect to server</string>
+
+    <string-array name="qualityArray">
+        <item>160x120</item>
+        <item>176x144</item>
+        <item>320x240</item>
+        <item>352x288</item>
+        <item>640x480</item>
+        <item>800x600</item>
+        <item>1024x768</item>
+        <item>1280x1024</item>
+        <item>1600x1200</item>
+    </string-array>
+
+    <string name="fragment_tag_main">main</string>
+    <string name="fragment_tag_set_ip">setIP</string>
+    <string name="fragment_tag_setting">setting</string>
+
+</resources>

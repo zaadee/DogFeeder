@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">เครื่องให้อาหาสุนัข</string>
+
+    <!-- A -->
+    <string name="auto_food">ให้อาหารอัตโนมัติ</string>
+    <!-- B -->
+    <!-- C -->
+    <string name="capture">จับภาพ</string>
+    <string name="cancel">ยกเลิก</string>
+    <string name="change">แก้ไข</string>
+    <string name="choose">เลือก</string>
+    <string name="connect">เชื่อมต่อ</string>
+
+    <!-- D -->
+    <string name="dog_feeder">ให้อาหารสุนัข</string>
+    <!-- E -->
+    <string name="eg_IP">เช่น 192.168.1.2</string>
+    <!-- F -->
+    <!-- G -->
+    <!-- H -->
+    <!-- I -->
+    <string name="ip_camera">ไอพีกล้องวิดิโอ</string>
+    <string name="iP_control_food">ไอพีควบคุมการให้อาหาร</string>
+    <string name="inputIPCam">กรุณากรอกไอพีกล้องวิดิโอ</string>
+    <!-- J -->
+    <!-- K -->
+    <!-- L -->
+    <string name="loadIMSuccess">โหลดรูปภาพเสร็จแล้ว</string>
+    <!-- M -->
+    <!-- M -->
+    <!-- O -->
+    <string name="open">เปิด</string>
+    <!-- P -->
+    <!-- Q -->
+    <string name="quality">คุณภาพวิดิโอ</string>
+    <!-- R -->
+    <!-- S -->
+    <string name="set_ip_camera">ตั้งค่าไอพีกล้องวิดิโอ</string>
+    <string name="set_ip">ตั้งค่าไอพี</string>
+    <string name="set_quality_video">ตั้งค่าคุณภาพวิดิโอ</string>
+    <string name="set_auto_food">ตั้งค่าการให้อาหารอัตโนมัติ</string>
+    <string name="setting">ตั้งค่า</string>
+
+    <string name="set_food_auto">กำลังตั้งค่าให้อาหารอัตโนมัต</string>
+    <string name="set_give_food">กำลังให้อาหาร</string>
+    <string name="set_water">กำลังให้น้ำ</string>
+    <!-- T -->
+    <!-- U -->
+    <!-- V -->
+    <string name="version">เวอร์ชั่น 1.1.0</string>
+    <!-- W -->
+    <string name="water">ให้น้ำสุนัข</string>
+    <!-- X -->
+    <!-- Y -->
+    <!-- Z -->
+
+    <!-- Error -->
+    <string name="err1">กรุณากรอกไอพีให้ครบ</string>
+    <string name="err2">กรุณากรอกไอพีกล้องวิดิโอให้ถูกต้อง</string>
+    <string name="err3">กรุณากรอกไอพีควบคุมการให้อาหารให้ถูกต้อง</string>
+    <string name="err4">กรุณากรอกไอพี</string>
+    <string name="err5">ไม่สามารถเชื่อมต่อเซิฟเวอร์</string>
+
+    <string-array name="qualityArray">
+        <item>160x120</item>
+        <item>176x144</item>
+        <item>320x240</item>
+        <item>352x288</item>
+        <item>640x480</item>
+        <item>800x600</item>
+        <item>1024x768</item>
+        <item>1280x1024</item>
+        <item>1600x1200</item>
+    </string-array>
+
+    <string name="fragment_tag_main">main</string>
+    <string name="fragment_tag_set_ip">setIP</string>
+    <string name="fragment_tag_setting">setting</string>
+</resources>

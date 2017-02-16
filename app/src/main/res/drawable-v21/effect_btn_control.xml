@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="?android:colorButtonNormal"><!-- set color ripple hare -->
+    <item android:drawable="@drawable/bg_icon"></item>
+</ripple>

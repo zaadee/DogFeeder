@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_vertical_margin"
+    tools:context="com.rmuti.project.dogfeeder.screen.ScreenSetIPServer">
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/PaddingSpace40"
+        android:text="@string/app_name"
+        android:textSize="@dimen/FontSize28" />
+
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_below="@+id/app_name"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:adjustViewBounds="true"
+        android:src="@drawable/app_logo" />
+
+    <View
+        android:id="@+id/center"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true">
+
+    </View>
+
+    <RelativeLayout
+        android:id="@+id/layout_set_ip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/center"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin">
+
+        <EditText
+            android:id="@+id/edt_ip_cam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/MarginSpace8"
+            android:background="@drawable/border_edt"
+            android:drawableLeft="@mipmap/ic_edt_cam"
+            android:drawablePadding="@dimen/PaddingSpace8"
+            android:hint="@string/ip_camera"
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:padding="@dimen/PaddingSpace8" />
+
+        <EditText
+            android:id="@+id/edt_ip_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_ip_cam"
+            android:layout_marginBottom="@dimen/PaddingSpace40"
+            android:background="@drawable/border_edt"
+            android:drawableLeft="@mipmap/ic_edt_control_food"
+            android:drawablePadding="@dimen/PaddingSpace8"
+            android:hint="@string/iP_control_food"
+            android:imeOptions="actionDone"
+            android:inputType="phone"
+            android:padding="@dimen/PaddingSpace8" />
+
+
+        <Button
+            android:id="@+id/btn_connect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_ip_control"
+            android:background="@drawable/effect_btn_connect"
+            android:text="@string/connect"
+            android:textColor="@color/White" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>
