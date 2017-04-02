@@ -139,7 +139,7 @@ public class ScreenMain extends Fragment implements View.OnClickListener {
                 intentFragment(new ScreenSetting(), getString(R.string.fragment_tag_setting));
                 break;
             default:
-
+                //
                 break;
         }
     }
