@@ -25,14 +25,14 @@ public class Connections {
 
     public void setAutoFood(ConnectionsListener connectionsListener) {
         this.connectionsListener = connectionsListener;
-        String url = "http://" + shareData.getIPControlFood() + "/food?autofood=" + !shareData.getAutoFood();
+        String url = "http://" + shareData.getIPControlFood() + "/food?autofood=true";
         Log.e(TAG, "setAutoFood: url: " + url);
-        new connectTask("Set auto food " + ((!shareData.getAutoFood()) ? "on" : "off")).execute(url);
+        new connectTask("On auto food").execute(url);
     }
 
-    public void giveFood(ConnectionsListener connectionsListener) {
+    public void giveFood(boolean value, ConnectionsListener connectionsListener) {
         this.connectionsListener = connectionsListener;
-        String url = "http://" + shareData.getIPControlFood() + "/food?givefood=true";
+        String url = "http://" + shareData.getIPControlFood() + "/food?givefood="+value;
         Log.e(TAG, "giveFood: url: " + url);
         new connectTask("Give food to Dog").execute(url);
     }

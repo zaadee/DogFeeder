@@ -4,7 +4,6 @@ package com.rmuti.project.dogfeeder.screen;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -13,7 +12,6 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -53,7 +51,6 @@ public class ScreenMain extends Fragment implements View.OnClickListener {
     private ShareData shareData;
     private RelativeLayout layoutAutoFood, layoutDogFeeder, layoutDogWater,
             layoutCapture, layoutSetQuality, layoutSettingIP;
-    private ImageView autoFoodBtn;
 
     private WebView streamView;
     private ProgressDialog progressDialog;
@@ -75,13 +72,35 @@ public class ScreenMain extends Fragment implements View.OnClickListener {
         initComponent();
         initWebView();
 
+        layoutDogFeeder.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN://press
+                        // Press hold 500ms for Start
+                        final Handler handler = new Handler();
+                        handler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                // Do something after 5s = 5000ms
+                                onGiveFood(true);
+                            }
+                        }, 500);
+                        break;
+                    case MotionEvent.ACTION_UP://release
+                        // End
+                        onGiveFood(false);
+                        break;
+                }
+                return false;
+            }
+        });
         layoutDogWater.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN://press
-                        // Start
-
+                        // Press hold 500ms for Start
                         final Handler handler = new Handler();
                         handler.postDelayed(new Runnable() {
                             @Override
@@ -109,9 +128,6 @@ public class ScreenMain extends Fragment implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.layout_auto_food:
                 setAutoFood();
-                break;
-            case R.id.layout_dog_feeder:
-                onGiveFood();
                 break;
             case R.id.layout_capture:
                 onSaveImage();
@@ -178,19 +194,13 @@ public class ScreenMain extends Fragment implements View.OnClickListener {
             layoutSetQuality = (RelativeLayout) rootView.findViewById(R.id.layout_set_quality_video);
             layoutSettingIP = (RelativeLayout) rootView.findViewById(R.id.layout_setting_ip);
 
-            layoutAutoFood.setOnClickListener(this);
+            //layoutAutoFood.setOnClickListener(this);
             layoutDogFeeder.setOnClickListener(this);
             layoutDogWater.setOnClickListener(this);
             layoutCapture.setOnClickListener(this);
             layoutSetQuality.setOnClickListener(this);
             layoutSettingIP.setOnClickListener(this);
 
-            autoFoodBtn = (ImageView) rootView.findViewById(R.id.imv_auto_food);
-            if (shareData.getAutoFood()) {
-                autoFoodBtn.setImageResource(R.drawable.ic_auto_food);
-            } else {
-                autoFoodBtn.setImageResource(R.drawable.ic_auto_food_close);
-            }
         }
     }
 
@@ -262,12 +272,7 @@ public class ScreenMain extends Fragment implements View.OnClickListener {
                     try {
                         JSONObject object = new JSONObject(message);
                         if (object.getInt("statusCode") == 200) {
-                            shareData.setAutoFood(!shareData.getAutoFood());
-                            if (shareData.getAutoFood()) {
-                                autoFoodBtn.setImageResource(R.drawable.ic_auto_food);
-                            } else {
-                                autoFoodBtn.setImageResource(R.drawable.ic_auto_food_close);
-                            }
+                            //
                         }
                         showSnackBar(object.getString("statusMessage"));
 
@@ -282,10 +287,10 @@ public class ScreenMain extends Fragment implements View.OnClickListener {
 
     }
 
-    private void onGiveFood() {
+    private void onGiveFood(boolean giveFood) {
         setDisableControl();
         setTitleToolbar(getString(R.string.set_give_food) + "...");
-        new Connections(getContext()).giveFood(new Connections.ConnectionsListener() {
+        new Connections(getContext()).giveFood(giveFood,new Connections.ConnectionsListener() {
             @Override
             public void onServerResponse(String message) {
                 setEnableControl();
