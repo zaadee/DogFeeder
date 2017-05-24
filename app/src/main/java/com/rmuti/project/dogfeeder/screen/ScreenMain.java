@@ -125,8 +125,10 @@ public class ScreenMain extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
 
+        Log.e("GGGGGGG", String.valueOf(v.getId()));
         switch (v.getId()) {
             case R.id.layout_auto_food:
+                Log.e("GGGGGGG","KKKKK");
                 setAutoFood();
                 break;
             case R.id.layout_capture:
@@ -194,9 +196,9 @@ public class ScreenMain extends Fragment implements View.OnClickListener {
             layoutSetQuality = (RelativeLayout) rootView.findViewById(R.id.layout_set_quality_video);
             layoutSettingIP = (RelativeLayout) rootView.findViewById(R.id.layout_setting_ip);
 
-            //layoutAutoFood.setOnClickListener(this);
-            layoutDogFeeder.setOnClickListener(this);
-            layoutDogWater.setOnClickListener(this);
+            layoutAutoFood.setOnClickListener(this);
+            //layoutDogFeeder.setOnClickListener(this);
+            //layoutDogWater.setOnClickListener(this);
             layoutCapture.setOnClickListener(this);
             layoutSetQuality.setOnClickListener(this);
             layoutSettingIP.setOnClickListener(this);

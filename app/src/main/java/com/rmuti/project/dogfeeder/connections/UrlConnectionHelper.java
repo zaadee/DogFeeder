@@ -8,9 +8,6 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-/**
- * Created by Sitthiphong on 2/12/2017 AD.
- */
 
 public class UrlConnectionHelper {
 

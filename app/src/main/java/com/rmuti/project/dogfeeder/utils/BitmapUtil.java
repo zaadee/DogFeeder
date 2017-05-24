@@ -18,10 +18,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
-/**
- * Created by Sitthiphong on 2/5/2017 AD.
- */
-
 
 public class BitmapUtil {
     private Context context;

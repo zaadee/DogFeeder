@@ -8,10 +8,6 @@ import android.util.Log;
 import com.rmuti.project.dogfeeder.utils.ShareData;
 
 
-/**
- * Created by Sitthiphong on 1/13/2017 AD.
- */
-
 public class Connections {
     private final String TAG = "Connections";
     private ConnectionsListener connectionsListener;

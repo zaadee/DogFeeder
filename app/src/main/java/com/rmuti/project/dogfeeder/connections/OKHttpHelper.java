@@ -7,9 +7,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-/**
- * Created by Sitthiphong on 1/13/2017 AD.
- */
 
 public class OKHttpHelper {
 
