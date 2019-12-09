@@ -2,12 +2,9 @@ package com.rmuti.project.dogfeeder.screen;
 
 
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
 import android.util.Patterns;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
-import android.view.Surface;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
@@ -15,10 +12,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.fragment.app.Fragment;
+
+import com.google.android.material.snackbar.Snackbar;
 import com.rmuti.project.dogfeeder.R;
 import com.rmuti.project.dogfeeder.utils.ShareData;
 
-import java.net.InetAddress;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -39,9 +38,9 @@ public class ScreenSetIPServer extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.screen_set_ip_server, container, false);
-        edtIPCam = (EditText) rootView.findViewById(R.id.edt_ip_cam);
-        edtControlFood = (EditText) rootView.findViewById(R.id.edt_ip_control);
-        btnConnect = (Button) rootView.findViewById(R.id.btn_connect);
+        edtIPCam = rootView.findViewById(R.id.edt_ip_cam);
+        edtControlFood = rootView.findViewById(R.id.edt_ip_control);
+        btnConnect = rootView.findViewById(R.id.btn_connect);
 
         edtControlFood.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -97,6 +96,4 @@ public class ScreenSetIPServer extends Fragment {
         }
 
     }
-
-
 }

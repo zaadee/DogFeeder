@@ -44,13 +44,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/MarginSpace8"
-            android:background="@drawable/border_edt"
             android:drawableLeft="@mipmap/ic_edt_cam"
             android:drawablePadding="@dimen/PaddingSpace8"
             android:hint="@string/ip_camera"
             android:imeOptions="actionNext"
             android:inputType="phone"
-            android:padding="@dimen/PaddingSpace8" />
+            android:paddingBottom="12dp" />
 
         <EditText
             android:id="@+id/edt_ip_control"
@@ -75,14 +74,10 @@
             android:background="@drawable/effect_btn_connect"
             android:text="@string/connect"
             android:textColor="@color/White" />
-
-
     </RelativeLayout>
 
     <TextView
         android:id="@+id/version"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-
-
 </RelativeLayout>

@@ -4,7 +4,4 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.rmuti.project.dogfeeder.activity.MainActivity">
-
-
-</FrameLayout>
+    tools:context="com.rmuti.project.dogfeeder.activity.MainActivity" />

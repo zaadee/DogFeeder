@@ -8,13 +8,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.Fragment;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -26,10 +19,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.google.android.material.snackbar.Snackbar;
 import com.rmuti.project.dogfeeder.R;
 import com.rmuti.project.dogfeeder.config.RequestCode;
 import com.rmuti.project.dogfeeder.connections.Connections;
@@ -128,7 +128,7 @@ public class ScreenMain extends Fragment implements View.OnClickListener {
         Log.e("GGGGGGG", String.valueOf(v.getId()));
         switch (v.getId()) {
             case R.id.layout_auto_food:
-                Log.e("GGGGGGG","KKKKK");
+                Log.e("GGGGGGG", "KKKKK");
                 setAutoFood();
                 break;
             case R.id.layout_capture:
@@ -180,21 +180,22 @@ public class ScreenMain extends Fragment implements View.OnClickListener {
 
     private void initToolbar() {
         if (rootView != null) {
-            Toolbar toolbar = (Toolbar) rootView.findViewById(R.id.toolbar);
-            ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
-            ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(getString(R.string.app_name));
+            Toolbar toolbar = rootView.findViewById(R.id.toolbar);
+            if (toolbar != null) {
+                ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+                ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(getString(R.string.app_name));
+            }
         }
-
     }
 
     private void initComponent() {
         if (rootView != null) {
-            layoutAutoFood = (RelativeLayout) rootView.findViewById(R.id.layout_auto_food);
-            layoutDogFeeder = (RelativeLayout) rootView.findViewById(R.id.layout_dog_feeder);
-            layoutDogWater = (RelativeLayout) rootView.findViewById(R.id.layout_dog_water);
-            layoutCapture = (RelativeLayout) rootView.findViewById(R.id.layout_capture);
-            layoutSetQuality = (RelativeLayout) rootView.findViewById(R.id.layout_set_quality_video);
-            layoutSettingIP = (RelativeLayout) rootView.findViewById(R.id.layout_setting_ip);
+            layoutAutoFood = rootView.findViewById(R.id.layout_auto_food);
+            layoutDogFeeder = rootView.findViewById(R.id.layout_dog_feeder);
+            layoutDogWater = rootView.findViewById(R.id.layout_dog_water);
+            layoutCapture = rootView.findViewById(R.id.layout_capture);
+            layoutSetQuality = rootView.findViewById(R.id.layout_set_quality_video);
+            layoutSettingIP = rootView.findViewById(R.id.layout_setting_ip);
 
             layoutAutoFood.setOnClickListener(this);
             //layoutDogFeeder.setOnClickListener(this);
@@ -208,7 +209,7 @@ public class ScreenMain extends Fragment implements View.OnClickListener {
 
     private void initWebView() {
         if (rootView != null) {
-            streamView = (WebView) rootView.findViewById(R.id.stream_view);
+            streamView = rootView.findViewById(R.id.stream_view);
             DisplayMetrics metrics = new DisplayMetrics();
             getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
 
@@ -292,7 +293,7 @@ public class ScreenMain extends Fragment implements View.OnClickListener {
     private void onGiveFood(boolean giveFood) {
         setDisableControl();
         setTitleToolbar(getString(R.string.set_give_food) + "...");
-        new Connections(getContext()).giveFood(giveFood,new Connections.ConnectionsListener() {
+        new Connections(getContext()).giveFood(giveFood, new Connections.ConnectionsListener() {
             @Override
             public void onServerResponse(String message) {
                 setEnableControl();

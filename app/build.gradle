@@ -1,12 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 29
     defaultConfig {
         applicationId "com.rmuti.project.dogfeeder"
-        minSdkVersion 16
-        targetSdkVersion 25
+        minSdkVersion 21
+        targetSdkVersion 29
         versionCode 1
         versionName "1.1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -20,15 +19,22 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    ext.supportlibraryGroup = '25.1.1'
-    compile "com.android.support:appcompat-v7:$supportlibraryGroup"
-    compile "com.android.support:design:$supportlibraryGroup"
-    compile "com.android.support:gridlayout-v7:$supportlibraryGroup"
-    compile 'com.squareup.okhttp3:okhttp:3.5.0'
-    compile 'com.afollestad.material-dialogs:core:0.9.2.3'
-    testCompile 'junit:junit:4.12'
+    //implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //Android Support, Core, KTX
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+
+    //Views components
+    implementation 'com.google.android.material:material:1.2.0-alpha02'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation 'com.afollestad.material-dialogs:core:0.9.2.3'
+
+    //OK Http
+    implementation 'com.squareup.okhttp3:okhttp:4.2.2'
+
+    //Testing
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }

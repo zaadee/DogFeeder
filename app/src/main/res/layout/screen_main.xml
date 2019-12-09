@@ -5,12 +5,13 @@
     android:layout_height="match_parent"
     tools:context="com.rmuti.project.dogfeeder.screen.ScreenMain">
 
-    <android.support.design.widget.AppBarLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <include layout="@layout/toolbar" />
-    </android.support.design.widget.AppBarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
     <RelativeLayout
         android:id="@+id/container_layout"
@@ -43,7 +44,7 @@
         </RelativeLayout>
 
 
-        <android.support.v7.widget.GridLayout
+        <androidx.gridlayout.widget.GridLayout
             android:id="@+id/control_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -217,10 +218,6 @@
                     android:layout_marginTop="@dimen/PaddingSpace2"
                     android:text="@string/set_ip" />
             </RelativeLayout>
-
-        </android.support.v7.widget.GridLayout>
-
+        </androidx.gridlayout.widget.GridLayout>
     </RelativeLayout>
-
-
 </RelativeLayout>

@@ -37,7 +37,7 @@ public class Connections {
         this.connectionsListener = connectionsListener;
         String url = "http://" + shareData.getIPControlFood() + "/water?value=" + value;
         Log.e(TAG, "Water: url: " + url);
-        new connectTask((value ? "Open Water" : "Close Water")).execute(url);
+        new connectTask((value ? "Open Water" : "Close Water")).execute(url,"");
     }
 
 

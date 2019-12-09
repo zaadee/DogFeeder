@@ -2,10 +2,6 @@ package com.rmuti.project.dogfeeder.screen;
 
 
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.InputType;
 import android.util.Patterns;
 import android.view.LayoutInflater;
@@ -15,7 +11,12 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.google.android.material.snackbar.Snackbar;
 import com.rmuti.project.dogfeeder.R;
 import com.rmuti.project.dogfeeder.utils.ShareData;
 
@@ -63,11 +64,11 @@ public class ScreenSetting extends Fragment implements View.OnClickListener {
 
     private void initComponent() {
         if (rootView != null) {
-            layoutSetIPCam = (RelativeLayout) rootView.findViewById(R.id.layout_set_ip_cam);
-            layoutSetControlFood = (RelativeLayout) rootView.findViewById(R.id.layout_set_ip_control_food);
+            layoutSetIPCam = rootView.findViewById(R.id.layout_set_ip_cam);
+            layoutSetControlFood = rootView.findViewById(R.id.layout_set_ip_control_food);
 
-            tvIPCam = (TextView) rootView.findViewById(R.id.value_set_ip_cam);
-            tvIPControlFood = (TextView) rootView.findViewById(R.id.value_set_ip_control_food);
+            tvIPCam = rootView.findViewById(R.id.value_set_ip_cam);
+            tvIPControlFood = rootView.findViewById(R.id.value_set_ip_control_food);
             tvIPCam.setText(shareData.getIPCam());
             tvIPControlFood.setText(shareData.getIPControlFood());
 
@@ -82,12 +83,14 @@ public class ScreenSetting extends Fragment implements View.OnClickListener {
 
     private void initToolbar() {
         if (rootView != null) {
-            Toolbar toolbar = (Toolbar) rootView.findViewById(R.id.toolbar);
-            setHasOptionsMenu(true);
-            ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
-            ((AppCompatActivity) getActivity()).getSupportActionBar().setHomeButtonEnabled(true);
-            ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(getString(R.string.set_ip));
+            Toolbar toolbar = rootView.findViewById(R.id.toolbar);
+            if (toolbar != null) {
+                setHasOptionsMenu(true);
+                ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+                ((AppCompatActivity) getActivity()).getSupportActionBar().setHomeButtonEnabled(true);
+                ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+                ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(getString(R.string.set_ip));
+            }
         }
 
     }
