@@ -83,12 +83,12 @@
       "attributes": {
         "OBJECTID": 11,
         "Country_Region": "Mainland China",
-        "Last_Update": 1580700184000,
+        "Last_Update": 1580771591000,
         "Lat": 37.5776849568384,
         "Long_": 112.292191181538,
-        "Confirmed": 17190,
-        "Deaths": 361,
-        "Recovered": 477
+        "Confirmed": 20416,
+        "Deaths": 425,
+        "Recovered": 637
       }
     },
     {
@@ -131,11 +131,11 @@
       "attributes": {
         "OBJECTID": 12,
         "Country_Region": "Hong Kong",
-        "Last_Update": 1580687582000,
+        "Last_Update": 1580786589000,
         "Lat": 22.3,
         "Long_": 114.2,
         "Confirmed": 15,
-        "Deaths": 0,
+        "Deaths": 1,
         "Recovered": 0
       }
     },
@@ -165,24 +165,24 @@
     },
     {
       "attributes": {
-        "OBJECTID": 22,
-        "Country_Region": "US",
-        "Last_Update": 1580684597000,
-        "Lat": 40,
-        "Long_": -100,
-        "Confirmed": 11,
+        "OBJECTID": 9,
+        "Country_Region": "Germany",
+        "Last_Update": 1580763182000,
+        "Lat": 51,
+        "Long_": 9,
+        "Confirmed": 12,
         "Deaths": 0,
         "Recovered": 0
       }
     },
     {
       "attributes": {
-        "OBJECTID": 9,
-        "Country_Region": "Germany",
-        "Last_Update": 1580666585000,
-        "Lat": 51,
-        "Long_": 9,
-        "Confirmed": 10,
+        "OBJECTID": 22,
+        "Country_Region": "US",
+        "Last_Update": 1580771591000,
+        "Lat": 40,
+        "Long_": -100,
+        "Confirmed": 11,
         "Deaths": 0,
         "Recovered": 0
       }
@@ -197,6 +197,18 @@
         "Confirmed": 10,
         "Deaths": 0,
         "Recovered": 0
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 17,
+        "Country_Region": "Vietnam",
+        "Last_Update": 1580766182000,
+        "Lat": 16,
+        "Long_": 108,
+        "Confirmed": 8,
+        "Deaths": 0,
+        "Recovered": 1
       }
     },
     {
@@ -237,18 +249,6 @@
     },
     {
       "attributes": {
-        "OBJECTID": 17,
-        "Country_Region": "Vietnam",
-        "Last_Update": 1580542692000,
-        "Lat": 16,
-        "Long_": 108,
-        "Confirmed": 6,
-        "Deaths": 0,
-        "Recovered": 1
-      }
-    },
-    {
-      "attributes": {
         "OBJECTID": 20,
         "Country_Region": "United Arab Emirates",
         "Last_Update": 1580622181000,
@@ -267,6 +267,18 @@
         "Lat": 53.868409,
         "Long_": -101.015459,
         "Confirmed": 4,
+        "Deaths": 0,
+        "Recovered": 0
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 21,
+        "Country_Region": "India",
+        "Last_Update": 1580766182000,
+        "Lat": 21,
+        "Long_": 78,
+        "Confirmed": 3,
         "Deaths": 0,
         "Recovered": 0
       }
@@ -304,18 +316,6 @@
         "Long_": 122,
         "Confirmed": 2,
         "Deaths": 1,
-        "Recovered": 0
-      }
-    },
-    {
-      "attributes": {
-        "OBJECTID": 21,
-        "Country_Region": "India",
-        "Last_Update": 1580623388000,
-        "Lat": 21,
-        "Long_": 78,
-        "Confirmed": 2,
-        "Deaths": 0,
         "Recovered": 0
       }
     },
